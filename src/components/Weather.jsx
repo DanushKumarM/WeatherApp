@@ -24,7 +24,7 @@ const Weather = () => {
     let [city, setCity] = useState(null);
 
     let fetchApi = async() => {
-        let apikey = `bc14a4768ad9525ec5f9d0ae3286e5df`
+        let apikey = process.env.REACT_APP_API_KEY;
         let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}&units=metric
 `
         try {
